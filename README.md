@@ -3,12 +3,13 @@
 ## Description
 <p align="center">
 This is a backend and simple front of django app.
-You can add a tasks and 
 
 After starting the server, you can view front on localhost:8000
+
 You can add tasks and view them on the main page
 
 To delete a task, you need to go on localhost:8000/admin
+
 admin credential is yarik - 112233 
 
 ## How to.
