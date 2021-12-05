@@ -1,0 +1,12 @@
+.vscode
+.idea/
+venv/
+VENV/
+*__pycache__*
+.coverage
+.coveragerc
+.DS_store
+
+# because of secret key inside
+settings.py
+
