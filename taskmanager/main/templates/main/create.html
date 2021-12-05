@@ -1,0 +1,20 @@
+<!-- JINJA template inheritance from main/base.html -->
+{% extends 'main/base.html' %}
+
+{% block title %}
+Create a task
+{% endblock %}
+
+{% block content %}
+    <h1>Create a task</h1>
+    <form method="post">
+        <!-- add the CSRF token  -->
+        {% csrf_token %}
+        <!-- TaskForm from taskmanager/main/views/create -->
+        {{ form.title }} <br>
+        {{ form.task }} <br>
+        <!-- class is a bootstrap style  -->
+        <button type="submit" class="btn btn-success">Add</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}

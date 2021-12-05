@@ -2,10 +2,22 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Main page
+<!-- title from index view response -->
+{{ title }}
 {% endblock %}
 
 {% block content %}
     <h1>Main page</h1>
-    <p>Some text</p>
+    {% if tasks %}
+<!-- tasks from index view response -->
+        {% for el in tasks %}
+            <!-- bootstrap style -->
+            <div class="alert alert-warning mt-2">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.task }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+            <p>No tasks in DB</p>
+    {% endif %}
 {% endblock %}
